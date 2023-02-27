@@ -68,5 +68,30 @@ namespace MadLibs.Controllers
       arcadeStory.IngVerb = ingVerb;
       return View(arcadeStory);
     }
+
+    [Route("/jungle-form")]
+    public ActionResult JungleForm() { return View(); }
+
+    [Route("/jungle-story")]
+    public ActionResult JungleStory(string adjective1, string adjective2, string adjective3, string adjective4, string adjective5, string adjective6, string adjective7, string noun1, string noun2, string noun3, string noun4, string verb1, string verb2, string verb3, string verb4)
+    {
+      JungleStory jungleStory = new JungleStory();
+      jungleStory.Adjective1 = adjective1;
+      jungleStory.Adjective2 = adjective2;
+      jungleStory.Adjective3 = adjective3;
+      jungleStory.Adjective4 = adjective4;
+      jungleStory.Adjective5 = adjective5;
+      jungleStory.Adjective6 = adjective6;
+      jungleStory.Adjective7 = adjective7;
+      jungleStory.Noun1 = noun1;
+      jungleStory.Noun2 = noun2;
+      jungleStory.Noun3 = noun3;
+      jungleStory.Noun4 = noun4;
+      jungleStory.Verb1 = verb1;
+      jungleStory.Verb2 = verb2;
+      jungleStory.Verb3 = verb3;
+      jungleStory.Verb4 = verb4;
+      return View(jungleStory);
+    }
   }
 }
