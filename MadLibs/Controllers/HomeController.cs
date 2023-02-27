@@ -50,5 +50,23 @@ namespace MadLibs.Controllers
       parkStory.Number = number;
       return View(parkStory);
     }
+
+    [Route("/arcade-form")]
+    public ActionResult ArcadeForm() { return View(); }
+
+    [Route("/arcade-story")]
+    public ActionResult ArcadeStory(string pluralNoun1, string pluralNoun2, string pluralNoun3, string pluralNoun4, string noun1, string noun2, string verb, string ingVerb)
+    {
+      ArcadeStory arcadeStory = new ArcadeStory();
+      arcadeStory.PluralNoun1 = pluralNoun1;
+      arcadeStory.PluralNoun2 = pluralNoun2;
+      arcadeStory.PluralNoun3 = pluralNoun3;
+      arcadeStory.PluralNoun4 = pluralNoun4;
+      arcadeStory.Noun1 = noun1;
+      arcadeStory.Noun2 = noun2;
+      arcadeStory.Verb = verb;
+      arcadeStory.IngVerb = ingVerb;
+      return View(arcadeStory);
+    }
   }
 }
